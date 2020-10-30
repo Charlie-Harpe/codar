@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Formulário</title>
+</head>
+
+<body>
+	<style>
+		form {
+			margin-top: 250px;
+			margin-left: 500px;
+			margin-right: 650px;
+			padding: 12px;
+
+		}
+	</style>
+	<form>
+		<div id="formulario"></div>
+
+		<fieldset>
+			<legend>Cadastro</legend>
+			<label><br>
+				<span>email: </span>
+				<input type="email" required id="email">
+			</label><br>
+
+			<label><br>
+				<span>Senha : </span>
+				<input type="password" required id="password">
+				</select>
+			</label><br><br>
+
+			<input type="submit" onclick="requestxml()" value="Enviar">
+		</fieldset>
+		<a href="register.html">Criar conta</a>
+	</form>
+
+	<div id="formulario"></div>
+	<script type="text/javascript" src="jsform.js"></script>
+
+
+</body>
+
+</html>
