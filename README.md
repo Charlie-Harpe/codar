@@ -7,4 +7,3 @@
 
 - Using the XML object javascript, collect the dada in the post method to autheticate in the api.
 
-<img src="exerc_2/login.png">
