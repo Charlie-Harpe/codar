@@ -6,3 +6,4 @@
 - Create a javascript function that validates the data.
 
 - Using the XML object javascript, collect the dada in the post method to autheticate in the api.
+
