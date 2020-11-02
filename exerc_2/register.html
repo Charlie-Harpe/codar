@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<style>
+    body {
+        background-color: rgb(18, 18, 20);
+    }
+
+    #container {
+        margin-top: 18%;
+        margin-right: 35%;
+        margin-left: 33%;
+        background-color: rgb(32, 32, 36);
+        border-radius: 7px;
+        text-align: center;
+        padding: 40px;
+        width: 30%;
+    }
+
+    .input-block {
+        border-radius: 5px;
+        border: 2px solid #9200f3;
+        padding: 2%;
+        width: 65%;
+        background: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .input-block:valid {
+        border: 2px solid #0aff0a;
+    }
+    
+    #container h2 {
+        color: rgb(255, 255, 255);
+        font-size: 30pt;
+        margin-bottom: 15%;
+        font-family: robo , sans-serif;
+    }
+
+    .send{
+        background-color: rgb(18, 18, 20);
+        border-radius: 5px;
+        background-color:#9200f3;
+        padding: 2%;
+        width: 70%;
+        color: rgb(255, 255, 255);
+        transition: all 0.3s ease-in;
+        border: none;
+    }
+
+    .send:hover{
+        background-color: #5e1291;
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <h2>Register</h2>
+        <form>
+            <label>
+                <input class="input-block"type="text" id="name" required name="name" placeholder="Name">
+            </label><br><br>
+
+            <label>
+                <input class="input-block" type="email" id="email" required name="email" placeholder="E-mail">
+            </label><br><br>
+
+            <input class="input-block" type="password" id="passwd" required name="password" placeholder="Password">
+            </label><br><br>
+
+            <label>
+                <input class="input-block" type="password" id="cpasswd" required name="confirma_password" placeholder="Confirm Password">
+            </label><br><br>
+
+            <button class="send" id="send" type="submit" onclick="validatedata()" value="Enviar">Send</button>
+
+            <script type="text/javascript" src="sendform.js"></script>
+        </form>
+
+    </div>
+</body>
+
+</html>
