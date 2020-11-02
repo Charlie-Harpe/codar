@@ -7,3 +7,7 @@
 
 - Using the XML object javascript, collect the dada in the post method to autheticate in the api.
 
+### Preview Exercise 2 
+  
+<img src="/prints/login.png">
+
