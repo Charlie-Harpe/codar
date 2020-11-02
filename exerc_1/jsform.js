@@ -1,5 +1,4 @@
 
-
 function requestxml() {
 
 	let email = document.getElementById("email");
