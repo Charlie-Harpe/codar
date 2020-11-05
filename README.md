@@ -11,3 +11,9 @@
   
 <img src="/prints/login.png">
 
+### Preview Exercise 3
+
+- When you click the green button or red button. the background will be change color.
+  
+<img src="/prints/alterstyle.png">
+
