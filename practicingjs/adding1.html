@@ -1,37 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 1 do exercício 2</title>
-
-    <style>
-        body {
-            background-color: #435784be;
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>01 - Criação uma função que recebe 2 parâmetros e retorna a soma deles.</h1>
-    <input type="button" id="botao" value="Calcule" onclick="calc()">
-    <script>
-        var num1 = parseInt(window.prompt("Digite um número "));
-        var num2 = parseInt(window.prompt("Digite outro número"));
-
-        function calc() {
-            total = num1 + num2;
-            document.write(total);
-
-        }
-    </script>
-</body>
-
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding Values</title>
-    
+
 </head>
 
 <body>
+
+    <h2>Adding values</h2>
+    <input type="button" id="calc" value="calc" onclick="calculate()">
     <script>
 
         var number1 = Number(window.prompt("Type first number"));
@@ -51,12 +20,12 @@
         function calculate() {
             result = number1 + number2;
             document.write(result);
+
+            if (number1 == "" || number2 == "") {
+                alert("0");
+            }
         }
     </script>
-
-    <h2>Adding values</h2>
-    <input type="button" id="calc" value="calc" onclick="calculate()">
-
 
 </body>
 
