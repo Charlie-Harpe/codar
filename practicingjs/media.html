@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show {
+            background-color: red;
+            text-align: center;
+            max-width: 20%;
+            margin-left: 40%;
+            color: white;
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first">
+        <h2>Digite 5 numeros para achar a média</h2>
+        <div id="show"></div>
+        <input type="number" name="numb1" id="numb1">
+        <input type="number" name="numb2" id="numb2">
+        <input type="number" name="numb3" id="numb3">
+        <input type="number" name="numb4" id="numb4">
+        <input type="number" name="numb5" id="numb5">
+        <button type="button" id="check" onclick="media()">Confirm</button>
+        </form>
+    </div>
+
+    <script>
+        function media() {
+            var numb1 = Number(document.getElementById("numb1").value);
+            var numb2 = Number(document.getElementById("numb2").value);
+            var numb3 = Number(document.getElementById("numb3").value);
+            var numb4 = Number(document.getElementById("numb4").value);
+            var numb5 = Number(document.getElementById("numb5").value);
+
+            var result = (numb1 + numb2 + numb3 + numb4 + numb5) / 5;
+
+            document.getElementById("show").innerHTML = (`A média dos valores é igual a ` + result);
+        }
+    </script>
+</body>
+
+</html>

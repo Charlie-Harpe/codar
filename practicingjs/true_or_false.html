@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True_or_false</title>
+</head>
+
+<body>
+
+    <!--Crie uma função que informa se tem os caracteres 'dota' no parâmetro informado, exiba um alert em tela caso seja verdadeiro.
+    -->
+    <h2>Verify string</h2>
+    <div id="show"></div>
+    <input type="text" id="frase_str" placeholder="Digite a frase">
+    <button type="button" id="Verify_sts" onclick="validate()">Confirm</button>
+
+
+    <script>
+        function validate() {
+            var str = document.getElementById("frase_str").value;
+
+            var key_word = 'dota';
+
+            document.getElementById("show").innerHTML = (`${str.includes(key_word) ? 'Verdadeiro' : 'falso'}`)
+
+        }
+    </script>
+</body>
+
+</html>
