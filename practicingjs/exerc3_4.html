@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Contagem de Caracter</h2>
+    <ul id="result"></ul>
+    </div>
+    <input type="text" id="nome" required placeholder="digite um nome">
+    <button type="button" id="confim" onclick="cont()">Confirm</button>
+    <script>
+        function cont() {
+            var nome = document.getElementById("nome").value;
+            var len = nome.length;
+
+            alert("O Texto digitado tem " + len + " caracteres");            
+
+          
+        }
+    </script>
+</body>
+
+</html>
