@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result {
+        background: rgb(248, 89, 89);
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+    #container {
+        max-width: 20%;
+        padding: 10px 0px 0px 0px;
+    }
+</style>
+
+<body>
+    <h2> Dentro da div com o id 'resultado', escreva os números de 0 ~ 10</h2>
+    <button onclick="prosse()" id="btton">Repeat</button>
+    <div id="container">
+        <div id="result"></div>
+    </div>
+
+    <script>
+
+        function prosse() {
+            var rept = 0;
+            while (rept <= 10) {
+                document.getElementById("result").innerHTML += (rept + ', ');
+                rept++
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
