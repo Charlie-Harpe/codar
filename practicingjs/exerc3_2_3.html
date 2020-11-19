@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Deuses Nordicos</h2>
+    <div>
+        <ul id="nomes"></ul>
+    </div>
+    <button type="button" id="confim" onclick="showdata()">Confirm</button>
+    <script>
+        function showdata() {
+            var deuses = ["Odin", "Loki", "Thor"];
+            var len = deuses.length;
+            var sor = deuses.sort();
+            console.log(len);
+            console.log(sor);
+
+
+            document.getElementById("nomes").innerHTML = (deuses);
+        }
+    </script>
+</body>
+
+</html>
