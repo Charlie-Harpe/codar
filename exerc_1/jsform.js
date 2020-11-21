@@ -15,7 +15,6 @@ function requestxml() {
 			var teste = JSON.parse(this.responseText)
 			document.getElementById("formulario").innerHTML = `Bem vindo ${teste.user.name}`
 
-			/*alert("Bem vindo"+teste.user.name)*/
 
 		}
 
