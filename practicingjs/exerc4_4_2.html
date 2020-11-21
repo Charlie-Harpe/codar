@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #result {
+        background: rgb(248, 89, 89);
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+
+    #container {
+        max-width: 20%;
+        padding: 10px 0px 0px 0px;
+    }
+</style>
+
+<body>
+    <h2>Utilizando o filter, Crie uma variáveis que tenha apenas os usuários que trabalham na Apple e com mais de 30
+        anos:
+    </h2>
+    <button onclick="prosse()" id="btton">Confirm</button>
+    <div id="container">
+        <div id="result"></div>
+    </div>
+
+    <script>
+
+        function prosse() {
+            const user = [{ nome: 'caio', idade: 25, empresa: 'Google' }, { nome: 'Tiago', idade: 35, empresa: 'Microsoft' }, { nome: 'Felipe', idade: 30, empresa: 'Apple' }];
+
+            const filterUser = user.filter(function (user) {
+                return user.idade >= 30 && user.empresa == 'Apple';
+
+
+            });
+            console.table(filterUser)
+           
+        }
+
+    </script>
+
+
+</body>
+
+</html>
