@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cotações de Moedas</h1>
+    <p>Selecione a moeda:
+        <select id="selectcoin">
+            <option value="USD">USD</option>
+            <!--<option value="USDT">USDT</option>
+            <option value="CAD">CAD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="ARS">ARS</option>
+            <option value="BTC">BTC</option>
+            <option value="LTC">LTC</option>
+            <option value="JPY">JPY</option>
+            <option value="CHF">CHF</option>
+            <option value="AUD">AUD</option>
+            <option value="CNY">CNY</option>
+            <option value="ILS">ILS</option>-->
+        </select>
+    </p>
+    <input type="submit" onclick="cotacoin()" value="Submit">
+    <div id="showcoin"></div>
+
+    <script>
+
+        function cotacoin() {
+
+            var takcoin = document.getElementById("selectcoin");
+            
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", `https://economia.awesomeapi.com.br/all/USD-BRL`, true);
+            xmlHttp.send();
+
+            xmlHttp.onreadystatechange = function () {
+                var coin = JSON.parse(xmlHttp.responseText);
+                document.getElementById("showcoin").innerHTML = `O valor da moeda em Real : R$` + coin.USD.high;
+
+            };
+            event.preventDefault();
+        }
+
+        //FORMATAR AS CASAS DECIMAIS DO RESPONSE
+    </script>
+</body>
+
+</html>
