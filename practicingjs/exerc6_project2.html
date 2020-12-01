@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Endereço</h1>
+    <input type="number" id="cep" maxlength="8">
+    <input type="submit" onclick="searchcep()" value="Pesquisar">
+    <h4>Endereço do CEP</h4>
+    <div id="showaddress"></div>
+
+    <script>
+
+        function searchcep() {
+
+            var cep = document.getElementById("cep").value;
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", `https://cep.awesomeapi.com.br/json/${cep}`, true);
+
+            xmlHttp.onreadystatechange = function () {
+                var teste = JSON.parse(this.responseText);
+                document.getElementById("showaddress").innerHTML = `CEP: ` + teste.cep + `<br>` + `Tipo de endereço: ` + teste.address_name + `<br>` + `Estado: ` + teste.state + `<br>` + `Bairro: ` + teste.district + `<br>` + `Cidade: ` + teste.city + `<br>` + `DDD :` + teste.ddd;
+
+            };
+            xmlHttp.send();
+            event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>
